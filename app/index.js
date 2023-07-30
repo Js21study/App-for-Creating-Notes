@@ -22,7 +22,7 @@ let setDate = '';
 let archiveResults = [];
 let listCatgories = ['Task', 'Random Thought', 'Idea', 'Quote'];
 
-//rendering, calculation in archive, deleting, editing, adding to archive
+//rendering, calculation in archive, deleting notes, editing, adding to archive
 
 let archiveStorage = () => {
   let countArchivedByCategory = {};
