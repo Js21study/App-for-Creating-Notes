@@ -281,7 +281,7 @@ date.addEventListener('change', function (event) {
   setDate = event.target.value;
 });
 
-//adding new note to notes or editing notes
+//adding new note to other notes or editing notes
 form.addEventListener('submit', function (event) {
   event.preventDefault();
 
