@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App for creating notes</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://kit.fontawesome.com/fac1863ba2.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-light bg-dark">
+        <div id="logo" class="name">Notes App</div>
+      </nav>
+    </header>
+    <div class="test"></div>
+    <div class="test"></div>
+    <div class="test"></div>
+
+    <div class="container">
+      <h1 class="text-success text-center mt-3">Active</h1>
+      <table class="table mt-5">
+        <thead>
+          <tr class="table-dark">
+            <th scope="col"></th>
+            <th scope="col">Name</th>
+            <th scope="col">Created</th>
+            <th scope="col">Category</th>
+            <th scope="col">Content</th>
+            <th scope="col">Dates</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody id="notes"></tbody>
+      </table>
+      <div class="d-flex justify-content-end">
+        <button id="create" class="btn btn-success mt-2 mb-2">Create</button>
+      </div>
+
+      <div class="modal-form" id="modal-form">
+        <a href="/" id="close" class="close"><i class="fa-solid fa-xmark"></i></a>
+        <form id="form">
+          <div class="form-group">
+            <label for="exampleFormControlInput1" class="mt-3">Write a title for note</label>
+            <input type="text" class="form-control mt-3" id="title" placeholder="To do ..." />
+          </div>
+
+          <div class="form-group">
+            <label for="exampleFormControlInput1" class="mt-3"
+              >Write a description for your note</label
+            >
+
+            <textarea
+              type="text"
+              class="form-control mt-3"
+              id="text"
+              placeholder="I want to do my task 27/07/2023 and ..."
+              cols="20"
+              rows="2"
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="exampleFormControlSelect1" class="mt-3">Selecting category</label>
+            <select class="form-control mt-3" id="select">
+              <option value="0"><i class="fa-solid fa-list-check category"></i> Task</option>
+              <option value="1"><i class="fa-solid fa-shuffle category"></i> Random Thought</option>
+              <option value="2"><i class="fa-regular fa-lightbulb category"></i> Idea</option>
+              <option value="3"><i class="fa-solid fa-quote-right category"></i> Quote</option>
+            </select>
+          </div>
+          <div class="form-group pt-2 pb-2">
+            <label for="date">Choose a date:</label>
+            <input type="date" class="text-success" id="date" name="date" />
+          </div>
+          <span id="error" class="text-danger"></span>
+          <button type="submit" id="confirm" class="btn btn-success mt-2">Confirm</button>
+        </form>
+      </div>
+
+      <table class="table mt-5">
+        <thead>
+          <tr class="table-dark">
+            <th scope="col"></th>
+            <th scope="col">Note Category</th>
+            <th scope="col">Active</th>
+            <th scope="col">Archived</th>
+          </tr>
+        </thead>
+        <tbody id="archive"></tbody>
+      </table>
+
+      <h1 class="text-secondary text-center mt-3">Archived</h1>
+      <table class="table mt-5">
+        <thead>
+          <tr class="table-dark">
+            <th scope="col"></th>
+            <th scope="col">Name</th>
+            <th scope="col">Created</th>
+            <th scope="col">Category</th>
+            <th scope="col">Content</th>
+            <th scope="col">Dates</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody id="archived-notes"></tbody>
+      </table>
+    </div>
+
+    <script type="module" src="app/index.js"></script>
+  </body>
+</html>
